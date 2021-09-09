@@ -10,6 +10,7 @@ export class NewsItem extends Component {
 
                 <div className="card-body">
                     <strong><p className="card-text">{this.props.title}</p></strong>
+                    <hr/>
 
                     <p className="card-text">{this.props.description}</p>
                     <div className="d-flex justify-content-between align-items-center">
@@ -17,7 +18,7 @@ export class NewsItem extends Component {
                             <a href={this.props.url}><button type="button" className="btn btn-sm btn-outline-secondary" >View</button></a>
 
                         </div>
-                        <small className="text-muted">9 mins</small>
+                        
                     </div>
                 </div>
             </div>
