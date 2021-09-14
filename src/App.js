@@ -1,50 +1,63 @@
 import './App.css';
-import {Navbar} from './components/Navbar'
+import {Navbar} from './components/Navbar';
 import NewsComponents from './components/NewsComponents';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  
 } from "react-router-dom";
+import LoadingBar from 'react-top-loading-bar';
+
+
 
 function App() {
+  
   return (
   <>
-    <Navbar/>
-    <Router>
+  <LoadingBar
+    progressIncrease={10}
+        color='white'
+        progress={100}
+        shadow={true}
+        height={3} />
+        
+  
+  <Router>
+  <Navbar/>
     <Switch>
       <Route exact path="/">
         <NewsComponents category="general"/>
       </Route>
-          <Route path="/home">
-            <NewsComponents  category = "general"/>
+          <Route exact path="/home">
+            <NewsComponents  key = "general"category = "general"/>
           </Route>
-          <Route path="/business">
-            <NewsComponents  category = "business"/>
+          <Route exact path="/business">
+            <NewsComponents key = "business" category = "business"/>
           </Route>
-          <Route path="/entertainment">
-            <NewsComponents  category = "entertainment"/>
+          <Route exact path="/entertainment">
+            <NewsComponents key = "entertainment" category = "entertainment"/>
           </Route>
-          <Route path="/health">
-            <NewsComponents  category = "health"/>
+          <Route exact path="/health">
+            <NewsComponents key = "health" category = "health"/>
           </Route>
-          <Route path="/science">
-            <NewsComponents  category = "science"/>
+          <Route exact path="/science">
+            <NewsComponents key = "science" category = "science"/>
           </Route>
-          <Route path="/sports">
-            <NewsComponents  category = "sports"/>
+          <Route exact path="/sports">
+            <NewsComponents key = "sports" category = "sports"/>
           </Route>
           
-          <Route path="/technology">
-            <NewsComponents  category = "technology"/>
+          <Route exact path="/technology">
+            <NewsComponents key = "technology" category = "technology"/>
           </Route>
           
         </Switch>
       
     </Router>
-    <NewsComponents/>
-  </>  
+    
+    </>
+  
   );
 }
 
