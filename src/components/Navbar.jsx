@@ -2,18 +2,36 @@ import React, { Component }  from 'react'
 import {Link} from "react-router-dom";
 
 export class Navbar extends Component {
-  state = {
-    mode: "light"
+  constructor() {
+    super();
+    this.state = {
+      mode: "light",
+      enableMode: "Enable Dark Mode ",
+      text : "text-dark"
+    };
+}
 
-  }
+  
 
-  //setDark
+  //set navbar dark on click of checkbox
   setDark = () => {
-    console.log("setDark");
-    this.setState({
-      mode: "dark"
-    })
-  }
+    if (this.state.mode === "light"){
+      this.setState({
+        mode: "dark",
+        enableMode : "Enable Light Mode",
+        text : "text-light"
+        
+      });
+      document.querySelector('body').style.background = 'black';
+    }else{
+      this.setState({
+        mode: "light" , 
+        enableMode : "Enable Dark Mode",
+        text : "text-dark"
+      });
+    }
+   
+  };
      
 
 
@@ -57,8 +75,8 @@ export class Navbar extends Component {
                
               </div>
               <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" id="flexSwitchCheckSuccess" />
-  <label class="form-check-label" onClick= {this.setDark} htmlFor="flexSwitchCheckChecked">Dark Mode</label>
+              <input class="form-check-input" onClick= {this.setDark}type="checkbox" id="flexSwitchCheckSuccess" />
+  <label class={`form-check-label ${this.state.text}`}  htmlFor="flexSwitchCheckChecked">{this.state.enableMode}</label>
 </div>
              
           </div>
