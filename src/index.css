@@ -12,3 +12,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.brand:hover {
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  background-color: #E0C3FC;
+  color: #8EC5FC;
+}
+ 

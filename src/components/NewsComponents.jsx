@@ -19,7 +19,7 @@ export class NewsComponents extends Component {
     componentDidMount() {
 
         const url = `
-        https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&pageSize={'40'}&apiKey=84beabe2ef1340b6bcdfae0d64be2370`;
+        https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&pageSize=40&apiKey=84beabe2ef1340b6bcdfae0d64be2370`;
         this.setState({ loading: true });
         fetch(url)
             .then(response => response.json())
