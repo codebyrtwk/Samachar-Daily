@@ -18,20 +18,24 @@ export class Navbar extends Component {
     if (this.state.mode === "light"){
       this.setState({
         mode: "dark",
-        enableMode : "Enable Light Mode",
+        enableMode : "Disable Dark Mode",
         text : "text-light"
         
       });
-      document.querySelector('body').style.background = 'black';
+      document.querySelector('body').style.background = '#6B6B6B';
+      
     }else{
       this.setState({
         mode: "light" , 
         enableMode : "Enable Dark Mode",
         text : "text-dark"
+        
       });
+      document.querySelector('body').style.background = 'linear-gradient(to right, #185a9d, #43cea2)';
     }
    
   };
+  
      
 
 
@@ -75,7 +79,7 @@ export class Navbar extends Component {
                
               </div>
               <div class="form-check form-switch">
-              <input class="form-check-input" onClick= {this.setDark}type="checkbox" id="flexSwitchCheckSuccess" />
+              <input class="form-check-input" onClick= {this.setDark}type="checkbox"  />
   <label class={`form-check-label ${this.state.text}`}  htmlFor="flexSwitchCheckChecked">{this.state.enableMode}</label>
 </div>
              
