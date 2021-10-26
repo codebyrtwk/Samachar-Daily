@@ -23,6 +23,7 @@ export class Navbar extends Component {
         
       });
       document.querySelector('body').style.background = '#6B6B6B';
+      // document.getElementsByClassName("news-item").style.backgroundColor = '#6B6B6B';
       
     }else{
       this.setState({
@@ -31,7 +32,7 @@ export class Navbar extends Component {
         text : "text-dark"
         
       });
-      document.querySelector('body').style.background = 'linear-gradient(to right, #185a9d, #43cea2)';
+      document.querySelector('body').style.background = ' linear-gradient(to right, #bfe9ff, #ff6e7f)';
     }
    
   };
