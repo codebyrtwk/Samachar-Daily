@@ -13,7 +13,7 @@ export class NewsItem extends Component {
                     <p className="card-text">{this.props.description}</p>
                     <div className="d-flex justify-content-between align-items-center">
                         <div className="btn-group">
-                            <a target= "_blank" rel="noreferrer" href={this.props.url}><button type="button" className="btn btn-sm btn-outline-secondary" >READ MORE</button></a>
+                            <a target= "_blank" rel="noreferrer" href={this.props.url}><button type="button" className="btn btn-sm btn-outline-primary"  >READ MORE</button></a>
                         </div>
                         <small className="text-muted">{this.props.publishedAt}</small>
                     <small>{this.props.date}</small>

@@ -17,11 +17,11 @@ export class NewsComponents extends Component {
 
 
     componentDidMount() {
-
-        const url = `
-        https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&pageSize=40&apiKey=84beabe2ef1340b6bcdfae0d64be2370`;
+        this.setState({ loading: true })
+        const url1 =   `https://saurav.tech/NewsAPI/top-headlines/category/${this.props.category}/in.json`;
+        console.log(url1);
         this.setState({ loading: true });
-        fetch(url)
+        fetch(url1)
             .then(response => response.json())
             .then(data => this.setState({ articles: data.articles, loading: false }));
     }
