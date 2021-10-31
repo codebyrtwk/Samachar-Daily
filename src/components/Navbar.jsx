@@ -32,7 +32,7 @@ export class Navbar extends Component {
         text : "text-dark"
         
       });
-      document.querySelector('body').style.background = ' linear-gradient(to right, #bfe9ff, #ff6e7f)';
+      document.querySelector('body').style.background = ' \linear-gradient(to right, #EAECC6, #2BC0E4)';
     }
    
   };
