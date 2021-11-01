@@ -32,7 +32,7 @@ export class Navbar extends Component {
         text : "text-dark"
         
       });
-      document.querySelector('body').style.background = ' \linear-gradient(to right, #EAECC6, #2BC0E4)';
+      document.querySelector('body').style.background = ' linear-gradient(to right, #EAECC6, #2BC0E4)';
     }
    
   };
@@ -77,12 +77,13 @@ export class Navbar extends Component {
                   </li>
                            
                 </ul>
-               
-              </div>
-              <div class="form-check form-switch">
+                <div class="form-check form-switch">
               <input class="form-check-input" onClick= {this.setDark}type="checkbox"  />
   <label class={`form-check-label ${this.state.text}`}  htmlFor="flexSwitchCheckChecked">{this.state.enableMode}</label>
 </div>
+               
+              </div>
+    
              
           </div>
           </nav>
